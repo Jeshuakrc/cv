@@ -1,0 +1,276 @@
+:root {
+    --color-main: rgb(80, 42, 133);
+    --color-sec: rgb(81, 99, 190);
+    --color-tag: rgba(0, 0, 0, 0.1);
+    --color-tag-text: rgba(0, 0, 0, 0.5);
+
+    --fontsiz-bigger: 6mm;
+    --fontsiz-big: 5mm;
+    --fontsiz-base: 4mm;
+    --fontsiz-small: 3.8mm;
+    --fontsiz-tiny: 2.8mm;
+    
+    --size-logo: 6mm;
+    --size-bullet-marker: 6mm;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('../rec/Mulish.ttf');
+}
+
+body {
+    font-family: Mulish;
+    font-size: var(--fontsiz-base);
+    height: 297mm;
+    width: 210mm;
+    background-color: rgb(28, 25, 31);
+    margin: 0;
+}
+
+.wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 8mm;
+    box-sizing: border-box;
+    background-color: white;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 8mm;
+    background-color: var(--color-main);
+    padding-top: 10mm;
+    padding-bottom: 8mm;
+    margin-top: -14mm;
+    border-radius: 0 0 8mm 8mm;
+    color: white;
+    font-weight: 600;
+    font-size: 6mm;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 7mm;
+    margin: 0;
+    margin-bottom: 2mm;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    padding-bottom: 0;
+    width: 100%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 12mm;
+    height: 50mm;
+    width: 90mm;
+    background-color: var(--color-main);
+    border-radius: 8mm 8mm 0 0;
+    box-sizing: border-box;
+    padding: 8mm;
+}
+
+#contactInfo {
+    display: grid;
+    grid-gap: 4mm;
+    height: 100%;
+    grid-template-columns: 1fr 5fr;
+    grid-auto-rows: 1fr;
+}
+
+#contactInfo {
+    color: white;
+    font-size: var(--fontsiz-base);
+}
+
+#contactInfo a {
+    color: white;
+}
+
+#contactInfo svg {
+    filter: invert(1);
+    justify-self: right;
+}
+
+#contactInfo svg,
+#contactInfo svg image {
+    height: var(--size-logo);
+    width: var(--size-logo);
+}
+
+#col1 {
+    padding-right: 4mm;
+}
+
+section {
+    margin-bottom: 6mm;
+}
+
+section * {
+    margin: 0;
+}
+
+section > .title {
+    margin: 0;
+    margin-bottom: 4mm;
+    font-size: var(--fontsiz-bigger);
+    color: var(--color-main);
+}
+
+.primary > .title {
+    color: white;
+    background-color: var(--color-main);
+    width: fit-content;
+    padding: 0.5mm 6mm 1mm 12mm;
+    border-radius: 0 4mm 4mm 0;
+    margin-left: -12mm;
+}
+
+.boxed {
+    border: 1mm solid var(--color-sec);
+    padding: 4mm;
+    padding-bottom: 2mm;
+    margin-bottom: 2mm;
+    border-radius: 4mm;
+}
+
+.boxed > .title {
+    color: var(--color-sec);
+}
+
+.indented {
+    margin-left: 4mm;
+}
+
+.detailedList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.detailedList > .title {
+    margin: 6mm 0 4mm 0;
+    font-size: var(--fontsiz-big);
+}
+
+.detailedList li .title {
+    display: inline;
+    font-size: var(--fontsiz-base);
+}
+
+.detailedList .period {
+    font-size: var(--fontsiz-tiny);
+    display: inline;
+    margin-left: 4mm;
+}
+
+.detailedList .details {
+    color: gray;
+    font-size: var(--fontsiz-small);
+}
+
+.detailedList li {
+    margin-bottom: 1mm;
+}
+
+.detailedList li * {
+    margin-top: 0;
+    margin-bottom: 2mm;
+}
+
+.detailedList .location {
+    margin-left: 4mm;
+    font-weight: 850;
+}
+
+.gridList {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 8mm;
+}
+
+.detailedList.bulletted > * {
+    border-left: 1mm solid var(--color-sec);
+    margin: 0;
+    padding: 1mm;
+    padding-left: 3mm;
+}
+
+.detailedList.bulletted > .title {
+    color: var(--color-sec);
+    margin-top: 3mm;
+    padding-top: 0;
+}
+
+.detailedList.bulletted > li {
+    padding-left: 6mm;
+
+}
+
+.shortList {
+    list-style-type: none;
+    padding: 0mm;
+    font-size: var(--fontsiz-base);
+}
+
+.shortList .title {
+    font-size: 5mm;
+    margin: 4mm 0mm 2mm 0mm;
+}
+.shortList li {
+    padding-top: 1mm;
+    padding-bottom: 1mm;
+}
+
+.tag {
+    display: inline;
+    width: fit-content;
+    padding: 1mm 2mm 1mm 2mm;
+    margin: 1mm;
+    background-color: var(--color-tag);
+    color: var(--color-tag-text);
+    font-size: var(--fontsiz-small);
+    border-radius: 2mm;
+    font-weight: 800;
+}
+
+.tag .note {
+    font-weight: 700;
+    font-size: 3mm;
+    margin-left: 1mm;
+}
+
+.tagBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tagBox > .title {
+    font-weight: 800;
+}
+
+.tagBox > .title::after {
+    content: "▶";
+    font-size: var(--fontsiz-small);
+    margin: 0 1mm 0 1mm;
+    color: var(--color-sec);
+    font-weight: 800;
+}
+
+.tagBox .tag {
+    font-size: 3mm;
+}
