@@ -1,0 +1,15 @@
+{
+  "type": "module",
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./src/pdfCreate.js" 
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^22.6.2"
+  }
+}
